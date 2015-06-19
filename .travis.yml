@@ -7,8 +7,6 @@ php:
   - 7.0
   - hhvm
 
-sudo: false
-
 cache:
   directories:
     - $HOME/.composer/cache
@@ -53,9 +51,9 @@ before_script:
   - travis_wait composer update --prefer-dist --no-interaction $COMPOSER_FLAGS
   - export PATH=$HOME/.local/bin:$PATH
   - pip install -r Resources/doc/requirements.txt --user `whoami`
-  - sudo -E su root -c 'apt-add-repository -y ppa:chris-lea/node.js'
-  - sudo -E su root -c 'apt-get update'
-  - sudo -E su root -c 'apt-get install -y nodejs'
+  - sudo apt-add-repository -y ppa:chris-lea/node.js
+  - sudo apt-get update
+  - sudo apt-get install -y nodejs
   - npm install
   - npm install csslint -g
 
