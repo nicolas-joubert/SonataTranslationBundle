@@ -54,7 +54,6 @@ before_script:
   - sudo apt-add-repository -y ppa:chris-lea/node.js
   - sudo apt-get update
   - sudo apt-get install -y nodejs
-  - npm install
   - npm install csslint -g
 
 
